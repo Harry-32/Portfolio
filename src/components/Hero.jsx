@@ -1,5 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
+import { Download, ArrowRight } from 'lucide-react';
 
 const badges = [
   { label: 'Data Science', color: 'from-indigo-600/20 to-violet-600/20 border-indigo-500/40 text-indigo-300' },
@@ -155,7 +156,7 @@ const Hero = () => {
             transition={{ duration: 0.6, delay: 0.8 }}
             className="text-lg md:text-xl lg:text-2xl text-white font-semibold mb-3 leading-relaxed drop-shadow-md"
           >
-          Bridging the Gap Between Advanced Data Science and Next-Gen Cyber-Resilience.
+            Bridging the Gap Between Advanced Data Science and Next-Gen Cyber-Resilience.
           </motion.p>
 
           <motion.p
@@ -175,7 +176,7 @@ const Hero = () => {
           >
             <a
               href="/HARIHARAN_R_RESUME.pdf"
-              download
+              download="HARIHARAN_R_RESUME.pdf"
               className="
                 shimmer-btn group relative inline-flex items-center justify-center gap-2
                 px-10 lg:px-12 py-4 rounded-xl overflow-hidden
