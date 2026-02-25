@@ -18,7 +18,7 @@ const socialLinks = [
   {
     name: "LINKEDIN",
     icon: <Linkedin size={26} />,
-    href: "https://linkedin.com/in/hari-haran32",
+    href: "https://www.linkedin.com/in/hariharan~r/",
     label: "hari-haran32",
     desc: "Let's connect professionally",
     color: "from-blue-600/20 to-purple-600/20 border-blue-500/30 hover:border-purple-400/60",
