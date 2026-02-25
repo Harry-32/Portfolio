@@ -4,7 +4,7 @@ import { Award, Briefcase, Shield, Zap, Calendar, MapPin } from 'lucide-react';
 
 const experiences = [
   {
-    date: "JUNE 2025 — MAY 2026",
+    date: "JUNE 2025 — PRESENT",
     location: "Chennai, India",
     title: "INTERN: C-DAC, CHENNAI",
     desc: "Researching Quantum-Safe security frameworks and Cloud protection solutions within HPC environments.",
