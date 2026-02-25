@@ -41,7 +41,7 @@ const experiences = [
 
 const Experience = () => {
   return (
-    <section id="experience" className="py-24 px-10 md:px-24 bg-transparent relative overflow-hidden">
+    <section id="experience" className="py-16 md:py-24 px-4 sm:px-6 md:px-16 bg-transparent relative overflow-hidden" style={{ scrollMarginTop: '72px' }}>
 
       {/* Section-level ambient glow */}
       <div
@@ -80,7 +80,7 @@ const Experience = () => {
               whileInView={{ opacity: 1, x: 0 }}
               viewport={{ once: true }}
               transition={{ delay: idx * 0.2, duration: 0.65, ease: 'easeOut' }}
-              className="mb-14 ml-14 md:ml-20 relative"
+              className="mb-14 ml-10 sm:ml-14 md:ml-20 relative"
             >
               {/* Timeline node */}
               <div

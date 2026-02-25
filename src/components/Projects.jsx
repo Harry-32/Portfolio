@@ -51,8 +51,8 @@ const deployments = [
 
 const Projects = () => {
   return (
-    <section id="projects" className="py-24 px-10 md:px-24 bg-transparent relative">
-      
+    <section id="projects" className="py-16 md:py-24 px-4 sm:px-6 md:px-16 bg-transparent relative" style={{ scrollMarginTop: '72px' }}>
+
       {/* 1. THE VERTICAL LINE EFFECT (The Spine) */}
       <div className="absolute left-4 md:left-6 top-0 bottom-0 w-[2px] bg-gradient-to-b from-purple-500/60 via-fuchsia-500/30 to-transparent" />
 
@@ -74,7 +74,7 @@ const Projects = () => {
         </motion.div>
 
         {/* 3. PROJECTS GRID (Indented to clear the spine) */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 ml-6 md:ml-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-5 md:gap-8 ml-0 sm:ml-4 md:ml-10">
           {deployments.map((project, idx) => (
             <motion.div
               key={idx}

@@ -57,7 +57,7 @@ const skillCategories = [
 
 const Skills = () => {
   return (
-    <section id="skills" className="py-24 px-10 md:px-24 bg-transparent relative">
+    <section id="skills" className="py-16 md:py-24 px-4 sm:px-6 md:px-16 bg-transparent relative" style={{ scrollMarginTop: '72px' }}>
       {/* Vertical spine line */}
       <div className="absolute left-4 md:left-6 top-0 bottom-0 w-[2px] bg-gradient-to-b from-purple-500/60 via-fuchsia-500/30 to-transparent" />
 
@@ -79,7 +79,7 @@ const Skills = () => {
         </motion.div>
 
         {/* Skills Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 ml-6 md:ml-10">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 ml-0 sm:ml-4 md:ml-10">
           {skillCategories.map((cat, idx) => (
             <motion.div
               key={idx}

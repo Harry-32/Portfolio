@@ -23,7 +23,7 @@ function App() {
 
   return (
     <div
-      className="min-h-screen relative overflow-hidden selection:bg-[#a855f7]/40 selection:text-white"
+      className="min-h-screen relative selection:bg-[#a855f7]/40 selection:text-white"
       style={{ cursor: 'none' }}
     >
       {/* ── SMOOTH CURSOR ── */}
@@ -133,7 +133,7 @@ function App() {
               © 2026 BATCH | SAEC
             </p>
             <div className="flex items-center gap-2">
-              <span className="badge-purple">I'm Waiting</span>
+              <span className="badge-purple">See you soon!</span>
             </div>
           </div>
         </footer>

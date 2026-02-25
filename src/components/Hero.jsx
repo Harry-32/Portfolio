@@ -15,24 +15,24 @@ const Hero = () => {
       className="
         relative min-h-screen
         flex items-center justify-center
-        px-6 md:px-12 lg:px-20
-        overflow-hidden
+        px-4 sm:px-6 md:px-12 lg:px-20
         bg-transparent
       "
+      style={{ scrollMarginTop: '0px' }}
     >
-      {/* TOP NAV */}
-      <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-8 md:px-16 py-8 z-30">
+      {/* TOP NAV — desktop */}
+      <nav className="absolute top-0 left-0 w-full flex justify-between items-center px-5 md:px-16 py-6 md:py-8 z-30">
         {/* Logo mark */}
         <motion.div
           initial={{ opacity: 0, x: -20 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}
-          className="font-mono text-xs tracking-[0.3em] text-purple-400/70 uppercase hidden md:block"
+          className="font-mono text-[0.6rem] md:text-xs tracking-[0.3em] text-purple-400/70 uppercase hidden sm:block"
         >
           PORTFOLIO
         </motion.div>
 
-        <div className="flex gap-6 md:gap-10 ml-auto">
+        <div className="flex gap-4 sm:gap-6 md:gap-10 ml-auto">
           {['Skills', 'Projects', 'Experience', 'Contact'].map((item, i) => (
             <motion.a
               key={item}
@@ -40,10 +40,14 @@ const Hero = () => {
               animate={{ y: 0, opacity: 1 }}
               transition={{ delay: 0.3 + i * 0.1 }}
               href={`#${item.toLowerCase()}`}
+              onClick={(e) => {
+                e.preventDefault();
+                document.getElementById(item.toLowerCase())?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+              }}
               className="
-                relative group text-[0.7rem] font-semibold text-white/80 
-                hover:text-fuchsia-400 transition-all duration-500 tracking-[0.3em] uppercase
-                before:absolute before:bottom-[-8px] before:left-1/2 before:-translate-x-1/2 
+                relative group text-[0.6rem] sm:text-[0.65rem] md:text-[0.7rem] font-semibold text-white/80
+                hover:text-fuchsia-400 transition-all duration-500 tracking-[0.15em] sm:tracking-[0.2em] md:tracking-[0.3em] uppercase
+                before:absolute before:bottom-[-6px] before:left-1/2 before:-translate-x-1/2
                 before:w-0 before:h-[2px] before:bg-gradient-to-r before:from-fuchsia-400/50 before:to-fuchsia-400/80
                 before:rounded-full before:opacity-0 before:transition-all before:duration-500
                 hover:before:w-6 hover:before:opacity-100 hover:before:translate-y-1
@@ -56,7 +60,7 @@ const Hero = () => {
       </nav>
 
       {/* MAIN CONTENT */}
-      <div className="relative z-40 max-w-6xl w-full mx-auto flex flex-col lg:flex-row items-center justify-center gap-10 lg:gap-16 pt-20 lg:pt-0">
+      <div className="relative z-40 max-w-6xl w-full mx-auto flex flex-col lg:flex-row items-center justify-center gap-8 lg:gap-16 pt-28 sm:pt-24 lg:pt-0">
 
         {/* LEFT: IMAGE WITH DUAL HALO */}
         <motion.div
@@ -97,7 +101,7 @@ const Hero = () => {
             }}
           />
           {/* Profile image */}
-          <div className="relative w-60 h-60 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-full overflow-hidden border-4 border-purple-500/60 shadow-[0_0_40px_rgba(168,85,247,0.4),0_0_80px_rgba(168,85,247,0.15)] animate-pulse-glow">
+          <div className="relative w-44 h-44 sm:w-56 sm:h-56 lg:w-72 lg:h-72 xl:w-80 xl:h-80 rounded-full overflow-hidden border-4 border-purple-500/60 shadow-[0_0_40px_rgba(168,85,247,0.4),0_0_80px_rgba(168,85,247,0.15)] animate-pulse-glow">
             <img
               src="/HARIHARAN image.jpg"
               alt="HARI HARAN R"
