@@ -53,8 +53,6 @@ const Projects = () => {
   return (
     <section id="projects" className="py-16 md:py-24 px-4 sm:px-6 md:px-16 bg-transparent relative" style={{ scrollMarginTop: '72px' }}>
 
-      {/* 1. THE VERTICAL LINE EFFECT (The Spine) */}
-      <div className="absolute left-4 md:left-6 top-0 bottom-0 w-[2px] bg-gradient-to-b from-purple-500/60 via-fuchsia-500/30 to-transparent" />
 
       <div className="max-w-7xl mx-auto relative z-10">
 
