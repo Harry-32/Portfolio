@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Award, Briefcase, Shield, Zap, Calendar, MapPin } from 'lucide-react';
+import { Award, Briefcase, Shield, Zap, Calendar, MapPin, ShoppingBag, Users } from 'lucide-react';
 
 const experiences = [
   {
@@ -18,6 +18,22 @@ const experiences = [
     accentColor: "rgba(168,85,247,0.12)",
     dotColor: "bg-purple-500",
     dotGlow: "shadow-[0_0_15px_rgba(168,85,247,0.8)]",
+  },
+  {
+    date: "CURRENT (TEMPORARY CONTRACT)",
+    location: "Chennai, India",
+    title: "CRM & LOGISTICS SUPPORT: DECATHLON",
+    desc: "Managing customer relationship operations and supply chain logistics to seamlessly resolve user expectations and fulfillment targets.",
+    icon: <ShoppingBag size={14} />,
+    badge: "Logistics",
+    badgeColor: "text-emerald-300 border-emerald-500/40 bg-emerald-900/20",
+    icon2: <Users size={14} />,
+    badge2: "CRM Ops",
+    badgeColor2: "text-emerald-300 border-emerald-500/40 bg-emerald-900/20",
+    tags: ["Customer Relations", "Supply Chain", "Operations", "Problem Solving"],
+    accentColor: "rgba(16,185,129,0.12)",
+    dotColor: "bg-emerald-500",
+    dotGlow: "shadow-[0_0_15px_rgba(16,185,129,0.8)]",
   },
   {
     date: "2024 — 2025",
@@ -84,9 +100,9 @@ const Experience = () => {
             >
               {/* Timeline node */}
               <div
-                className={`absolute -left-[46px] md:-left-[58px] top-6 w-5 h-5 ${exp.dotColor} rounded-full border-4 border-[#0a0015] animate-node-pulse z-10`}
+                className={`absolute -left-[46px] md:-left-[58px] top-6 w-5 h-5 ${exp.dotColor} rounded-full border-4 border-[#0a0015] ${exp.dotGlow} z-10`}
               >
-                <div className="w-full h-full rounded-full animate-ping bg-fuchsia-400 opacity-20" />
+                <div className="w-full h-full rounded-full animate-ping bg-white/20 opacity-20" />
               </div>
 
               {/* Connector line to card */}

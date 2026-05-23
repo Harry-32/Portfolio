@@ -1,6 +1,6 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Linkedin, Github } from 'lucide-react';
+import { Mail, Github } from 'lucide-react';
 
 const email = "michaelhariharan@gmail.com";
 
@@ -14,16 +14,6 @@ const socialLinks = [
     color: "from-purple-600/20 to-fuchsia-600/20 border-purple-500/30 hover:border-fuchsia-400/60",
     iconBg: "bg-purple-900/40 border-purple-500/30 group-hover:border-fuchsia-400/60 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]",
     iconColor: "text-purple-300 group-hover:text-fuchsia-300",
-  },
-  {
-    name: "LINKEDIN",
-    icon: <Linkedin size={26} />,
-    href: "https://www.linkedin.com/in/hariharan~r/",
-    label: "hari-haran32",
-    desc: "Let's connect professionally",
-    color: "from-blue-600/20 to-purple-600/20 border-blue-500/30 hover:border-purple-400/60",
-    iconBg: "bg-blue-900/30 border-blue-500/30 group-hover:border-purple-400/60 group-hover:shadow-[0_0_20px_rgba(99,102,241,0.3)]",
-    iconColor: "text-blue-300 group-hover:text-purple-300",
   },
   {
     name: "GITHUB",
@@ -41,7 +31,6 @@ const Contact = () => {
   return (
     <section id="contact" className="py-16 md:py-24 px-4 sm:px-6 md:px-16 bg-transparent relative overflow-hidden" style={{ scrollMarginTop: '72px' }}>
 
-
       {/* Background orb */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
@@ -53,7 +42,7 @@ const Contact = () => {
 
       <div className="max-w-5xl mx-auto relative z-10 text-center">
 
-        {/* 2. THE HEADER LINE EFFECT (Symmetrical) */}
+        {/* Header Line Effect */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -90,8 +79,8 @@ const Contact = () => {
           My systems are open for technical discussions or career inquiries.
         </p>
 
-        {/* Social Cards (Indented to clear the spine) */}
-        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 ml-0 sm:ml-4 md:ml-10 text-left">
+        {/* Social Cards (Changed grid-cols to 2 columns for a clean balanced layout) */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 ml-0 sm:ml-4 md:ml-10 text-left max-w-2xl mx-auto">
           {socialLinks.map((link, idx) => (
             <motion.a
               key={idx}
@@ -114,7 +103,7 @@ const Contact = () => {
               </div>
 
               {/* Text */}
-              <div className="flex flex-col gap-1">
+              <div className="flex flex-col gap-1 items-center text-center">
                 <span className="font-mono text-xs tracking-[0.3em] text-purple-300 font-bold uppercase">
                   {link.name}
                 </span>
