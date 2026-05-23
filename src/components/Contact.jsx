@@ -29,8 +29,11 @@ const socialLinks = [
 
 const Contact = () => {
   return (
-    <section id="contact" className="py-16 md:py-24 px-4 sm:px-6 md:px-16 bg-transparent relative overflow-hidden" style={{ scrollMarginTop: '72px' }}>
-
+    <section 
+      id="contact" 
+      className="py-16 md:py-24 px-4 sm:px-6 md:px-16 bg-transparent relative overflow-hidden" 
+      style={{ scrollMarginTop: '72px' }}
+    >
       {/* Background orb */}
       <div
         className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[600px] rounded-full pointer-events-none"
@@ -41,7 +44,6 @@ const Contact = () => {
       />
 
       <div className="max-w-5xl mx-auto relative z-10 text-center">
-
         {/* Header Line Effect */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -79,8 +81,8 @@ const Contact = () => {
           My systems are open for technical discussions or career inquiries.
         </p>
 
-        {/* Social Cards (Changed grid-cols to 2 columns for a clean balanced layout) */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 ml-0 sm:ml-4 md:ml-10 text-left max-w-2xl mx-auto">
+        {/* Centered Social Grid */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 justify-items-center max-w-2xl mx-auto w-full">
           {socialLinks.map((link, idx) => (
             <motion.a
               key={idx}
@@ -92,7 +94,7 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.5 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className={`group flex flex-col items-center gap-5 p-8 rounded-2xl bg-gradient-to-br ${link.color} backdrop-blur-sm border transition-all duration-400 relative overflow-hidden`}
+              className={`group flex flex-col items-center gap-5 p-8 rounded-2xl bg-gradient-to-br ${link.color} backdrop-blur-sm border transition-all duration-400 relative overflow-hidden w-full max-w-sm text-center`}
             >
               {/* Top glow line */}
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-fuchsia-500/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -102,12 +104,12 @@ const Contact = () => {
                 {link.icon}
               </div>
 
-              {/* Text */}
-              <div className="flex flex-col gap-1 items-center text-center">
+              {/* Text content wrapped and aligned centrally */}
+              <div className="flex flex-col gap-1 items-center">
                 <span className="font-mono text-xs tracking-[0.3em] text-purple-300 font-bold uppercase">
                   {link.name}
                 </span>
-                <span className="text-white/80 text-sm font-medium group-hover:text-white transition-colors">
+                <span className="text-white/80 text-sm font-medium group-hover:text-white transition-colors break-all px-2">
                   {link.label}
                 </span>
                 <span className="text-slate-500 text-[11px] font-mono group-hover:text-slate-400 transition-colors">
