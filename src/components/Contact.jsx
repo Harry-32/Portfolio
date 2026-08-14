@@ -1,19 +1,29 @@
 import React from 'react';
 import { motion } from 'framer-motion';
-import { Mail, Github } from 'lucide-react';
+import { Mail, Linkedin, Github } from 'lucide-react';
 
-const email = "michaelhariharan@gmail.com";
+const email = "hariharan@gmail.com";
 
 const socialLinks = [
   {
     name: "EMAIL",
     icon: <Mail size={26} />,
     href: `mailto:${email}`,
-    label: "michaelhariharan@gmail.com",
+    label: "hariharan@gmail.com",
     desc: "Drop me a message",
     color: "from-purple-600/20 to-fuchsia-600/20 border-purple-500/30 hover:border-fuchsia-400/60",
     iconBg: "bg-purple-900/40 border-purple-500/30 group-hover:border-fuchsia-400/60 group-hover:shadow-[0_0_20px_rgba(168,85,247,0.3)]",
     iconColor: "text-purple-300 group-hover:text-fuchsia-300",
+  },
+  {
+    name: "LINKEDIN",
+    icon: <Linkedin size={26} />,
+    href: "https://www.linkedin.com/in/hariharan~r/", // Replace with your active LinkedIn profile URL
+    label: "hari-haran32",
+    desc: "Let's connect professionally",
+    color: "from-blue-600/20 to-purple-600/20 border-blue-500/30 hover:border-purple-400/60",
+    iconBg: "bg-blue-900/30 border-blue-500/30 group-hover:border-purple-400/60 group-hover:shadow-[0_0_20px_rgba(99,102,241,0.3)]",
+    iconColor: "text-blue-300 group-hover:text-purple-300",
   },
   {
     name: "GITHUB",
@@ -81,8 +91,8 @@ const Contact = () => {
           My systems are open for technical discussions or career inquiries.
         </p>
 
-        {/* Centered Social Grid */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 md:gap-6 justify-items-center max-w-2xl mx-auto w-full">
+        {/* Social Cards (3-column layout) */}
+        <div className="grid grid-cols-1 sm:grid-cols-3 gap-4 md:gap-6 justify-items-center max-w-5xl mx-auto w-full text-center">
           {socialLinks.map((link, idx) => (
             <motion.a
               key={idx}
@@ -94,7 +104,7 @@ const Contact = () => {
               viewport={{ once: true }}
               transition={{ delay: idx * 0.1, duration: 0.5 }}
               whileHover={{ y: -8, scale: 1.02 }}
-              className={`group flex flex-col items-center gap-5 p-8 rounded-2xl bg-gradient-to-br ${link.color} backdrop-blur-sm border transition-all duration-400 relative overflow-hidden w-full max-w-sm text-center`}
+              className={`group flex flex-col items-center gap-5 p-8 rounded-2xl bg-gradient-to-br ${link.color} backdrop-blur-sm border transition-all duration-400 relative overflow-hidden w-full`}
             >
               {/* Top glow line */}
               <div className="absolute top-0 left-0 right-0 h-[2px] bg-gradient-to-r from-transparent via-fuchsia-500/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
@@ -104,7 +114,7 @@ const Contact = () => {
                 {link.icon}
               </div>
 
-              {/* Text content wrapped and aligned centrally */}
+              {/* Text */}
               <div className="flex flex-col gap-1 items-center">
                 <span className="font-mono text-xs tracking-[0.3em] text-purple-300 font-bold uppercase">
                   {link.name}

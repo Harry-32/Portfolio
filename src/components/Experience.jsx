@@ -4,10 +4,10 @@ import { Award, Briefcase, Shield, Zap, Calendar, MapPin, ShoppingBag, Users } f
 
 const experiences = [
   {
-    date: "JUNE 2025 — PRESENT",
+    date: "JUNE 2025 — JUNE 2026",
     location: "Chennai, India",
     title: "INTERN: C-DAC, CHENNAI",
-    desc: "Researching Quantum-Safe security frameworks and Cloud protection solutions within HPC environments.",
+    desc: "Researched Quantum-Safe security frameworks and Cloud protection solutions within HPC environments.",
     icon: <Briefcase size={14} />,
     badge: "Research and Development",
     badgeColor: "text-purple-300 border-purple-500/40 bg-purple-900/20",
@@ -38,17 +38,17 @@ const experiences = [
   {
     date: "2024 — 2025",
     location: "Tamil Nadu, India",
-    title: "HACKATHON AWARDEE",
-    desc: "• Won 2nd prize at Stella Maris College (HackAiThon)",
-    desc2: "• 3rd prize at Meenakshi Sundararajan Engineering College (PowerBI dashboard analytics)",
-    desc3: "• Participated in the offline round of HackFinity 2025 (National Level 24-Hour Hackathon) at SIMATS Engineering.",
+    title: "HACKATHONS & AWARDS",
+    desc: "• Won 3rd prize in Meenakshi Sundararajan Engineering College (Power BI Dashboard Analytics).",
+    desc2: "• Participated in Stella Maris College (HackAiThon).",
+    desc3: "• Participated in 24-hour National Level Hackathon at SIMATS Deemed University.",
     icon: <Award size={14} />,
     badge: "Award",
     badgeColor: "text-fuchsia-300 border-fuchsia-500/40 bg-fuchsia-900/20",
     icon2: <Zap size={14} />,
     badge2: "Participation",
     badgeColor2: "text-fuchsia-300 border-fuchsia-500/40 bg-fuchsia-900/20",
-    tags: ["AI/ML", "Innovation", "Problem Solving"],
+    tags: ["AI/ML", "Power BI", "Hackathons", "Problem Solving"],
     accentColor: "rgba(232,121,249,0.10)",
     dotColor: "bg-fuchsia-500",
     dotGlow: "shadow-[0_0_15px_rgba(232,121,249,0.8)]",
@@ -58,7 +58,6 @@ const experiences = [
 const Experience = () => {
   return (
     <section id="experience" className="py-16 md:py-24 px-4 sm:px-6 md:px-16 bg-transparent relative overflow-hidden" style={{ scrollMarginTop: '72px' }}>
-
       {/* Section-level ambient glow */}
       <div
         className="absolute inset-0 pointer-events-none"
@@ -68,7 +67,6 @@ const Experience = () => {
       />
 
       <div className="max-w-5xl mx-auto relative z-10">
-
         {/* Section Header */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -86,7 +84,6 @@ const Experience = () => {
 
         {/* Timeline */}
         <div className="relative">
-          {/* Animated flowing timeline line */}
           <div className="absolute left-4 md:left-6 top-0 bottom-0 w-[2px] timeline-line rounded-full" />
 
           {experiences.map((exp, idx) => (
@@ -163,7 +160,7 @@ const Experience = () => {
                 <div className="space-y-2 mb-6">
                   {exp.desc && <p className="text-slate-300/90 text-sm md:text-base leading-relaxed">{exp.desc}</p>}
                   {exp.desc2 && <p className="text-slate-300/90 text-sm md:text-base leading-relaxed">{exp.desc2}</p>}
-                  {exp.desc3 && <p className="text-slate-400/80 text-sm md:text-base leading-relaxed italic">{exp.desc3}</p>}
+                  {exp.desc3 && <p className="text-slate-300/90 text-sm md:text-base leading-relaxed">{exp.desc3}</p>}
                 </div>
 
                 {/* Tags */}
